@@ -14,8 +14,8 @@ def main():
     for num in tempNums:
         nums.append(int(num))
 
-    ans = bSearch(nums, max(nums), min(nums), sentScore)
-    print(f'answer:{ans}')
+    # ans = bSearch(nums, max(nums), min(nums), sentScore)
+    # print(f'answer:{ans}')
     dumbWay(nums)
    
 
@@ -44,6 +44,7 @@ def bSearch(input, upper, lower, bestScore):
 
 def dumbWay(input):
     bestScore = 99999999999999999999999
+    winningPosition = 0
     i = min(input)
     while i < max(input):
         score = 0
@@ -53,9 +54,12 @@ def dumbWay(input):
             score += numerator//2
         if score < bestScore:
             bestScore = score
+            winningPosition = i
         i += 1
     
     print(bestScore)
+    print(f'winning Position: {winningPosition}')
+    print(f'average of input: {sum(input)/len(input)}')
         
     
     
