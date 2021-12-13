@@ -48,9 +48,6 @@ def multiFold(coords, instructions):
     for line in y:
         print(line)
 
-
-
-
 def fold(coords, instruction):
     foldSide = 0
     if 'y' in instruction:
