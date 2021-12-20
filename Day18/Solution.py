@@ -11,11 +11,11 @@ def main():
         lines.append(parse(line.strip(), 1)[1])
     
     findCombinations(lines)
-    #current = addAllNums(lines)
-    #current = [[[[8,7],[7,7]],[[8,6],[7,7]]],[[[0,7],[6,6]],[8,7]]]
-    # magnitude = findMag(current[0], current[1])
+    
+    current = addAllNums(lines)
+    magnitude = findMag(current[0], current[1])
 
-    # print(magnitude)
+    print(magnitude)
 
 def findMag(left, right):
     lVal = 0
